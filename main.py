@@ -51,8 +51,6 @@ while True:
     ):
         ball.speed_y *= -1
 
-
-
     # Update the display
     pygame.display.flip()
 
