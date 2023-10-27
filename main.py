@@ -18,7 +18,7 @@ ball = Ball(WIDTH, HEIGHT)
 paddle = Paddle(WIDTH, HEIGHT)
 BlockManager = BlockManager()
 
-BlockManager.add_blocks(3, 2)
+BlockManager.add_blocks(WINDOW_SIZE, 3, 6)
 
 
 # Main game loop
@@ -37,7 +37,7 @@ while True:
         paddle.go_right()
 
     # Draw Screen
-    screen.fill(WHITE)
+    screen.fill((0, 0, 0))
     paddle.draw_me(screen)
     ball.draw_me(screen)
     BlockManager.draw_blocks(screen)
