@@ -45,11 +45,7 @@ while True:
     # Check for collisions
     ball.move()
     ball.check_wall_collisions(WINDOW_SIZE)
-    if (
-        paddle.x <= ball.x <= paddle.x + paddle.width
-        and paddle.y <= ball.y + ball.size <= paddle.y + paddle.height
-    ):
-        ball.speed_y *= -1
+    ball.check_paddle_collision(paddle)
 
     # Update the display
     pygame.display.flip()
