@@ -32,21 +32,24 @@ while True:
     if keys[pygame.K_RIGHT] and paddle.x < WIDTH - paddle.width:
         paddle.go_right()
 
-    # Clear the screen
+    # Draw Screen
     screen.fill(WHITE)
-
     paddle.draw_me(screen)
     ball.draw_me(screen)
 
+    # Check for collisions
     ball.move()
     ball.check_wall_collisions(WINDOW_SIZE)
-
-    # Ball collision with paddle
-    if paddle.x <= ball.x <= paddle.x + paddle.width and paddle.y <= ball.y + ball.size <= paddle.y + paddle.height:
+    if (
+        paddle.x <= ball.x <= paddle.x + paddle.width
+        and paddle.y <= ball.y + ball.size <= paddle.y + paddle.height
+    ):
         ball.speed_y *= -1
+
+
 
     # Update the display
     pygame.display.flip()
-
+    
     # Limit frames per second
     pygame.time.Clock().tick(60)
