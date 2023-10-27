@@ -1,6 +1,6 @@
 import pygame
 import sys
-from objects import Paddle, Ball
+from objects import Paddle, Ball, BlockManager
 
 # Initialize Pygame
 pygame.init()
@@ -16,6 +16,10 @@ pygame.display.set_caption("Arkanoid Game")
 
 ball = Ball(WIDTH, HEIGHT)
 paddle = Paddle(WIDTH, HEIGHT)
+BlockManager = BlockManager()
+
+BlockManager.add_blocks(3, 2)
+
 
 # Main game loop
 while True:
@@ -36,6 +40,7 @@ while True:
     screen.fill(WHITE)
     paddle.draw_me(screen)
     ball.draw_me(screen)
+    BlockManager.draw_blocks(screen)
 
     # Check for collisions
     ball.move()
@@ -50,6 +55,6 @@ while True:
 
     # Update the display
     pygame.display.flip()
-    
+
     # Limit frames per second
     pygame.time.Clock().tick(60)
