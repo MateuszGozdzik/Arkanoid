@@ -1,5 +1,7 @@
 ### Etap I - Wersja podstawowa
 
+## DONE
+
 - 1 piłeczka, platforma, klocki do zbicia w różnych kolorach
 - Platforma odbija piteczke pod róznymi katami (kat odbicia piteczki zalezy od miejsca odbicia piteczki na platformie, im blizej srodka platformy tym kat odbicia wiekszy)
 - Stwórzcie pomoc z opisem mechaniki
