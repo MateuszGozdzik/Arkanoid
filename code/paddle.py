@@ -2,10 +2,10 @@ import pygame
 
 
 class Paddle:
-    def __init__(self, width, height) -> None:
+    def __init__(self, window_size) -> None:
         self.width, self.height = 300, 10
-        self.x = (width - self.width) // 2
-        self.y = height - 20
+        self.x = (window_size[0] - self.width) // 2
+        self.y = window_size[1] - 20
         self.speed = 8
 
     def go_left(self):

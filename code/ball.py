@@ -2,9 +2,9 @@ import pygame
 
 
 class Ball:
-    def __init__(self, width, height) -> None:
+    def __init__(self, window_size) -> None:
         self.size = 20
-        self.x, self.y = width // 2, height // 2
+        self.x, self.y = window_size[0] // 2, window_size[1] // 2
         self.starting_speed_x, self.starting_speed_y = 5, 5
         self.speed_x, self.speed_y = self.starting_speed_x, self.starting_speed_y
 
