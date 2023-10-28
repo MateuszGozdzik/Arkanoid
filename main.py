@@ -1,6 +1,8 @@
 import pygame
 import sys
-from objects import Paddle, Ball, BlockManager
+from code.paddle import Paddle
+from code.ball import Ball
+from code.blocks import BlockManager
 
 # Initialize Pygame
 pygame.init()
