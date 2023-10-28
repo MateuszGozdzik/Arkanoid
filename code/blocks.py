@@ -18,15 +18,17 @@ class BlockManager:
         self.block_width, self.block_height = 80, 30
         self.blocks = []
         self.COLORS = {
-            # name: [rgb, points, hit's to break]
-            "white": [(255, 255, 255), 50, 1],
+            # name: [rgb, points, hits to break]
+            "white": [(241, 241, 241), 50, 1],
             "orange": [(255, 165, 0), 60, 1],
             "cyan": [(0, 255, 255), 70, 1],
             "green": [(0, 255, 0), 80, 1],
             "red": [(255, 0, 0), 90, 1],
-            "blue": [(0, 0, 255), 100, 1],
-            "purple": [(127, 0, 255), 110, 1],
+            "blue": [(0, 112, 255), 100, 1],
+            "purple": [(255, 0, 255), 110, 1],
             "yellow": [(255, 255, 0), 120, 1],
+            "silver": [(157,157,157), 50, 1],  #TODO Change points, and hits
+            "gold": [(188, 174, 0), -1, -1],
         }
         self.COLOR_LIST = [color for color in self.COLORS]
 
@@ -49,7 +51,7 @@ class BlockManager:
                 y=start_y + row * block_height_with_padding,
                 width=self.block_width,
                 height=self.block_height,
-                color=color_list_extended.pop()
+                color=self.COLORS[color_list_extended.pop()][0]
             )
             for row in range(num_rows)
             for col in range(num_cols)

@@ -8,6 +8,8 @@
 
 ### Etap II - Wersja rozszerzona
 
+https://strategywiki.org/wiki/Arkanoid/Gameplay
+
 - Stwórzcie rozszerzenia do etapu I - nalezy dodac opcje dotadowan:
 - dtuzsza platforme - 3 pkt
 - wiecej pitek- 3 pkt
