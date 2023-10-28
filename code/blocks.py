@@ -8,7 +8,9 @@ class BlockManager:
             self.y = y
             self.width = width
             self.height = height
-            self.color = color
+            self.color = color[0]
+            self.point = color[1]
+            self.hits = color[2]
         def draw_me(self, screen):
             pygame.draw.rect(
                 screen, self.color, (self.x, self.y, self.width, self.height)
@@ -27,7 +29,7 @@ class BlockManager:
             "blue": [(0, 112, 255), 100, 1],
             "purple": [(255, 0, 255), 110, 1],
             "yellow": [(255, 255, 0), 120, 1],
-            "silver": [(157,157,157), 50, 1],  #TODO Change points, and hits
+            "silver": [(157,157,157), 50, 2],  #TODO Change points, and hits
             "gold": [(188, 174, 0), -1, -1],
         }
         self.COLOR_LIST = [color for color in self.COLORS]
@@ -51,7 +53,7 @@ class BlockManager:
                 y=start_y + row * block_height_with_padding,
                 width=self.block_width,
                 height=self.block_height,
-                color=self.COLORS[color_list_extended.pop()][0]
+                color=self.COLORS[color_list_extended.pop()]
             )
             for row in range(num_rows)
             for col in range(num_cols)

@@ -60,7 +60,9 @@ class Gamer():
             block.x - self.ball.size <= self.ball.x <= block.x + block.width + self.ball.size
             and block.y - self.ball.size <= self.ball.y <= block.y + block.height + self.ball.size
         ):
-                self.BlockManager.blocks.remove(block)
+                block.hits -= 1
+                if block.hits == 0:
+                    self.BlockManager.blocks.remove(block)
                 self.ball.speed_x *= -1
                 self.ball.speed_y *= -1
                 break
