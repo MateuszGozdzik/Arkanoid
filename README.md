@@ -1,4 +1,5 @@
 # Arkanoid
 
-<img width="800" alt="image" src="https://github.com/MateuszGozdzik/Arkanoid/assets/68371896/eaf77f50-804f-4304-8e8c-14bd0301acf0">
+<img width="755" alt="image" src="https://github.com/MateuszGozdzik/Arkanoid/assets/68371896/f6306994-6f3d-49fb-a5e8-4b363acdbaa5">
+
 
